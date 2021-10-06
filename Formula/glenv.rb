@@ -5,28 +5,28 @@
 class Glenv < Formula
   desc "jump into repository folder and GitLab env. variables are automatically loaded into your shell"
   homepage "https://github.com/kiwicom/glenv"
-  version "0.6"
+  version "0.8"
   bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kiwicom/glenv/releases/download/v0.6/glenv_0.6_Darwin_x86_64.tar.gz"
-      sha256 "9e3b89860d6f09cb319e544f7e11de4ccd8cde89a3ea2bec8834cb141ac19223"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/kiwicom/glenv/releases/download/v0.6/glenv_0.6_Darwin_arm64.tar.gz"
-      sha256 "4d2432cbfbf8386bd137cc0513ed296c28c204d15b119d3d7d733596410086b6"
+      url "https://github.com/kiwicom/glenv/releases/download/v0.8/glenv_0.8_Darwin_arm64.tar.gz"
+      sha256 "dcbd09aa80827752f87e5176dba8889642d9da81f7be8852ee73607dd0892be7"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/kiwicom/glenv/releases/download/v0.8/glenv_0.8_Darwin_x86_64.tar.gz"
+      sha256 "1f1b414a6d75313ef884d7a1d6fa63f7ac2ef427af25d9295bbdb3d6444e88e3"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kiwicom/glenv/releases/download/v0.6/glenv_0.6_Linux_x86_64.tar.gz"
-      sha256 "ee285f3c94e0f2c87c701e6cfe19a935cc83d7e12b5334787085776225ff34a6"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kiwicom/glenv/releases/download/v0.6/glenv_0.6_Linux_arm64.tar.gz"
-      sha256 "08f77ca2c4eaec841201cc77c602e427813f0ede9adb09d3f9cc53f8eb5683b6"
+      url "https://github.com/kiwicom/glenv/releases/download/v0.8/glenv_0.8_Linux_arm64.tar.gz"
+      sha256 "3421241fe8ad49b3dbfbe4541e698256edee66684041848ea5d1f69b0b015c63"
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/kiwicom/glenv/releases/download/v0.8/glenv_0.8_Linux_x86_64.tar.gz"
+      sha256 "f69c10aca136c032d2ff81d51870faafefa42733f8b127baf7501ab103b4c1f4"
     end
   end
 
