@@ -5,20 +5,20 @@
 class Glenv < Formula
   desc "jump into repository folder and GitLab env. variables are automatically loaded into your shell"
   homepage "https://github.com/kiwicom/glenv"
-  version "0.9.3"
+  version "0.9.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kiwicom/glenv/releases/download/v0.9.3/glenv_0.9.3_macOS_amd64.tar.gz"
-      sha256 "43b45b9cbc5dc1cde410aa726239f824c3eddf14d2def58da762e018d0cb8695"
+      url "https://github.com/kiwicom/glenv/releases/download/v0.9.4/glenv_0.9.4_macOS_amd64.tar.gz"
+      sha256 "802060716813cbd9f3d0dcd61dd2a3fa686d358de967c0f2627d99fb5ee65375"
 
       def install
         bin.install "glenv"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kiwicom/glenv/releases/download/v0.9.3/glenv_0.9.3_macOS_arm64.tar.gz"
-      sha256 "d70920f63dc4ccec246540c807f1cd6c2ed7432d7e3a78e10c56248e294f89d5"
+      url "https://github.com/kiwicom/glenv/releases/download/v0.9.4/glenv_0.9.4_macOS_arm64.tar.gz"
+      sha256 "75b3ff348e1d1d3485d9edda95023acf9a8c50a2a449c323b80f3ec93f320968"
 
       def install
         bin.install "glenv"
@@ -28,16 +28,16 @@ class Glenv < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kiwicom/glenv/releases/download/v0.9.3/glenv_0.9.3_linux_arm64.tar.gz"
-      sha256 "de3077b58f0e7509a2d0b8794c88bd954563a6b3e16abd6dfe7e0b2a2e7f4f8e"
+      url "https://github.com/kiwicom/glenv/releases/download/v0.9.4/glenv_0.9.4_linux_arm64.tar.gz"
+      sha256 "143da0b5653ec3956a745d2c71e2c84a158155c87620c9916b915cda41a26ad6"
 
       def install
         bin.install "glenv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kiwicom/glenv/releases/download/v0.9.3/glenv_0.9.3_Linux_adm64.tar.gz"
-      sha256 "8781395b0283ed41054c9d97ebbc505d7e1b2bc02574c06ffd243499a238a3b6"
+      url "https://github.com/kiwicom/glenv/releases/download/v0.9.4/glenv_0.9.4_linux_adm64.tar.gz"
+      sha256 "f9c184a6f90e6bbcaf8d63867b3967c957c903ed21dd839128fee05dc188c440"
 
       def install
         bin.install "glenv"
